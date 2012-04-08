@@ -157,7 +157,7 @@
 //    queryURL = [[NSString alloc] initWithString: @"http://www.kickserve.net/loco/poc/web/postdata.php"];
     
     queryURL = [[NSString alloc] initWithFormat:@"http://www.kickserve.net/loco/poc/web/postdata.php?inTrackID=%@&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
-        @"1333681925",
+        @"1333681926",
         lat,
         lon,
         @"5",
@@ -165,7 +165,7 @@
         @"1",
         @"1",
         @"Chris",
-        @"iPhone emulator"];
+        @"iPhone_emulator"];
 
     queryResults = [[NSString alloc]
                     initWithContentsOfURL:[NSURL URLWithString:queryURL]
