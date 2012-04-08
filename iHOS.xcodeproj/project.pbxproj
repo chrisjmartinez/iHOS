@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A629579C153114B30005BD93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579B153114B30005BD93 /* UIKit.framework */; };
+		A629579E153114B30005BD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579D153114B30005BD93 /* Foundation.framework */; };
+		A62957A0153114B30005BD93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579F153114B30005BD93 /* CoreGraphics.framework */; };
+		A62957A6153114B30005BD93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A62957A4153114B30005BD93 /* InfoPlist.strings */; };
+		A62957A8153114B30005BD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957A7153114B30005BD93 /* main.m */; };
+		A62957AC153114B30005BD93 /* iHOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957AB153114B30005BD93 /* iHOSAppDelegate.m */; };
+		A62957AF153114B30005BD93 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62957AD153114B30005BD93 /* MainStoryboard_iPhone.storyboard */; };
+		A62957B2153114B30005BD93 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62957B0153114B30005BD93 /* MainStoryboard_iPad.storyboard */; };
+		A62957B5153114B30005BD93 /* iHOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957B4153114B30005BD93 /* iHOSViewController.m */; };
+		A62957BD153114B30005BD93 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62957BC153114B30005BD93 /* SenTestingKit.framework */; };
+		A62957BE153114B30005BD93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579B153114B30005BD93 /* UIKit.framework */; };
+		A62957BF153114B30005BD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579D153114B30005BD93 /* Foundation.framework */; };
+		A62957C7153114B30005BD93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A62957C5153114B30005BD93 /* InfoPlist.strings */; };
+		A62957CA153114B30005BD93 /* iHOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957C9153114B30005BD93 /* iHOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A62957C0153114B30005BD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A629578E153114B30005BD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6295796153114B30005BD93;
+			remoteInfo = iHOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6295797153114B30005BD93 /* iHOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A629579B153114B30005BD93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A629579D153114B30005BD93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A629579F153114B30005BD93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A62957A3153114B30005BD93 /* iHOS-Info.plist */ = {isa = PBXFileReference; path = "iHOS-Info.plist"; sourceTree = "<group>"; };
+		A62957A5153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A62957A7153114B30005BD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A62957A9153114B30005BD93 /* iHOS-Prefix.pch */ = {isa = PBXFileReference; path = "iHOS-Prefix.pch"; sourceTree = "<group>"; };
+		A62957AA153114B30005BD93 /* iHOSAppDelegate.h */ = {isa = PBXFileReference; path = iHOSAppDelegate.h; sourceTree = "<group>"; };
+		A62957AB153114B30005BD93 /* iHOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSAppDelegate.m; sourceTree = "<group>"; };
+		A62957AE153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A62957B1153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A62957B3153114B30005BD93 /* iHOSViewController.h */ = {isa = PBXFileReference; path = iHOSViewController.h; sourceTree = "<group>"; };
+		A62957B4153114B30005BD93 /* iHOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSViewController.m; sourceTree = "<group>"; };
+		A62957BB153114B30005BD93 /* iHOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62957BC153114B30005BD93 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A62957C4153114B30005BD93 /* iHOSTests-Info.plist */ = {isa = PBXFileReference; path = "iHOSTests-Info.plist"; sourceTree = "<group>"; };
+		A62957C6153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A62957C8153114B30005BD93 /* iHOSTests.h */ = {isa = PBXFileReference; path = iHOSTests.h; sourceTree = "<group>"; };
+		A62957C9153114B30005BD93 /* iHOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6295794153114B30005BD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A629579C153114B30005BD93 /* UIKit.framework in Frameworks */,
+				A629579E153114B30005BD93 /* Foundation.framework in Frameworks */,
+				A62957A0153114B30005BD93 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62957B7153114B30005BD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62957BD153114B30005BD93 /* SenTestingKit.framework in Frameworks */,
+				A62957BE153114B30005BD93 /* UIKit.framework in Frameworks */,
+				A62957BF153114B30005BD93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A629578C153114B30005BD93 = {
+			isa = PBXGroup;
+			children = (
+				A62957A1153114B30005BD93 /* iHOS */,
+				A62957C2153114B30005BD93 /* iHOSTests */,
+				A629579A153114B30005BD93 /* Frameworks */,
+				A6295798153114B30005BD93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6295798153114B30005BD93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6295797153114B30005BD93 /* iHOS.app */,
+				A62957BB153114B30005BD93 /* iHOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A629579A153114B30005BD93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A629579B153114B30005BD93 /* UIKit.framework */,
+				A629579D153114B30005BD93 /* Foundation.framework */,
+				A629579F153114B30005BD93 /* CoreGraphics.framework */,
+				A62957BC153114B30005BD93 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A62957A1153114B30005BD93 /* iHOS */ = {
+			isa = PBXGroup;
+			children = (
+				A62957AA153114B30005BD93 /* iHOSAppDelegate.h */,
+				A62957AB153114B30005BD93 /* iHOSAppDelegate.m */,
+				A62957AD153114B30005BD93 /* MainStoryboard_iPhone.storyboard */,
+				A62957B0153114B30005BD93 /* MainStoryboard_iPad.storyboard */,
+				A62957B3153114B30005BD93 /* iHOSViewController.h */,
+				A62957B4153114B30005BD93 /* iHOSViewController.m */,
+				A62957A2153114B30005BD93 /* Supporting Files */,
+			);
+			path = iHOS;
+			sourceTree = "<group>";
+		};
+		A62957A2153114B30005BD93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A62957A3153114B30005BD93 /* iHOS-Info.plist */,
+				A62957A4153114B30005BD93 /* InfoPlist.strings */,
+				A62957A7153114B30005BD93 /* main.m */,
+				A62957A9153114B30005BD93 /* iHOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A62957C2153114B30005BD93 /* iHOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A62957C8153114B30005BD93 /* iHOSTests.h */,
+				A62957C9153114B30005BD93 /* iHOSTests.m */,
+				A62957C3153114B30005BD93 /* Supporting Files */,
+			);
+			path = iHOSTests;
+			sourceTree = "<group>";
+		};
+		A62957C3153114B30005BD93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A62957C4153114B30005BD93 /* iHOSTests-Info.plist */,
+				A62957C5153114B30005BD93 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6295796153114B30005BD93 /* iHOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62957CD153114B30005BD93 /* Build configuration list for PBXNativeTarget "iHOS" */;
+			buildPhases = (
+				A6295793153114B30005BD93 /* Sources */,
+				A6295794153114B30005BD93 /* Frameworks */,
+				A6295795153114B30005BD93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iHOS;
+			productName = iHOS;
+			productReference = A6295797153114B30005BD93 /* iHOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A62957BA153114B30005BD93 /* iHOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62957D0153114B30005BD93 /* Build configuration list for PBXNativeTarget "iHOSTests" */;
+			buildPhases = (
+				A62957B6153114B30005BD93 /* Sources */,
+				A62957B7153114B30005BD93 /* Frameworks */,
+				A62957B8153114B30005BD93 /* Resources */,
+				A62957B9153114B30005BD93 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A62957C1153114B30005BD93 /* PBXTargetDependency */,
+			);
+			name = iHOSTests;
+			productName = iHOSTests;
+			productReference = A62957BB153114B30005BD93 /* iHOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A629578E153114B30005BD93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A6295791153114B30005BD93 /* Build configuration list for PBXProject "iHOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A629578C153114B30005BD93;
+			productRefGroup = A6295798153114B30005BD93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6295796153114B30005BD93 /* iHOS */,
+				A62957BA153114B30005BD93 /* iHOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6295795153114B30005BD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62957A6153114B30005BD93 /* InfoPlist.strings in Resources */,
+				A62957AF153114B30005BD93 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A62957B2153114B30005BD93 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62957B8153114B30005BD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62957C7153114B30005BD93 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A62957B9153114B30005BD93 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6295793153114B30005BD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62957A8153114B30005BD93 /* main.m in Sources */,
+				A62957AC153114B30005BD93 /* iHOSAppDelegate.m in Sources */,
+				A62957B5153114B30005BD93 /* iHOSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62957B6153114B30005BD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62957CA153114B30005BD93 /* iHOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A62957C1153114B30005BD93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6295796153114B30005BD93 /* iHOS */;
+			targetProxy = A62957C0153114B30005BD93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A62957A4153114B30005BD93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62957A5153114B30005BD93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A62957AD153114B30005BD93 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62957AE153114B30005BD93 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A62957B0153114B30005BD93 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62957B1153114B30005BD93 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A62957C5153114B30005BD93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62957C6153114B30005BD93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A62957CB153114B30005BD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A62957CC153114B30005BD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A62957CE153114B30005BD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHOS/iHOS-Prefix.pch";
+				INFOPLIST_FILE = "iHOS/iHOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A62957CF153114B30005BD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHOS/iHOS-Prefix.pch";
+				INFOPLIST_FILE = "iHOS/iHOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A62957D1153114B30005BD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iHOS.app/iHOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHOS/iHOS-Prefix.pch";
+				INFOPLIST_FILE = "iHOSTests/iHOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A62957D2153114B30005BD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iHOS.app/iHOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHOS/iHOS-Prefix.pch";
+				INFOPLIST_FILE = "iHOSTests/iHOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6295791153114B30005BD93 /* Build configuration list for PBXProject "iHOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62957CB153114B30005BD93 /* Debug */,
+				A62957CC153114B30005BD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A62957CD153114B30005BD93 /* Build configuration list for PBXNativeTarget "iHOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62957CE153114B30005BD93 /* Debug */,
+				A62957CF153114B30005BD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A62957D0153114B30005BD93 /* Build configuration list for PBXNativeTarget "iHOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62957D1153114B30005BD93 /* Debug */,
+				A62957D2153114B30005BD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A629578E153114B30005BD93 /* Project object */;
+}
