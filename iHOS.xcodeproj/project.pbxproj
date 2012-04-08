@@ -21,6 +21,8 @@
 		A62957BF153114B30005BD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A629579D153114B30005BD93 /* Foundation.framework */; };
 		A62957C7153114B30005BD93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A62957C5153114B30005BD93 /* InfoPlist.strings */; };
 		A62957CA153114B30005BD93 /* iHOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957C9153114B30005BD93 /* iHOSTests.m */; };
+		A6E5D9C315311AE20047C8D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E5D9C215311AE20047C8D6 /* MapKit.framework */; };
+		A6E5D9C615311AEA0047C8D6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E5D9C515311AEA0047C8D6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +40,24 @@
 		A629579B153114B30005BD93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A629579D153114B30005BD93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A629579F153114B30005BD93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A62957A3153114B30005BD93 /* iHOS-Info.plist */ = {isa = PBXFileReference; path = "iHOS-Info.plist"; sourceTree = "<group>"; };
+		A62957A3153114B30005BD93 /* iHOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHOS-Info.plist"; sourceTree = "<group>"; };
 		A62957A5153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A62957A7153114B30005BD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A62957A9153114B30005BD93 /* iHOS-Prefix.pch */ = {isa = PBXFileReference; path = "iHOS-Prefix.pch"; sourceTree = "<group>"; };
-		A62957AA153114B30005BD93 /* iHOSAppDelegate.h */ = {isa = PBXFileReference; path = iHOSAppDelegate.h; sourceTree = "<group>"; };
+		A62957A9153114B30005BD93 /* iHOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iHOS-Prefix.pch"; sourceTree = "<group>"; };
+		A62957AA153114B30005BD93 /* iHOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHOSAppDelegate.h; sourceTree = "<group>"; };
 		A62957AB153114B30005BD93 /* iHOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSAppDelegate.m; sourceTree = "<group>"; };
 		A62957AE153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		A62957B1153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		A62957B3153114B30005BD93 /* iHOSViewController.h */ = {isa = PBXFileReference; path = iHOSViewController.h; sourceTree = "<group>"; };
+		A62957B3153114B30005BD93 /* iHOSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHOSViewController.h; sourceTree = "<group>"; };
 		A62957B4153114B30005BD93 /* iHOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSViewController.m; sourceTree = "<group>"; };
 		A62957BB153114B30005BD93 /* iHOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62957BC153114B30005BD93 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		A62957C4153114B30005BD93 /* iHOSTests-Info.plist */ = {isa = PBXFileReference; path = "iHOSTests-Info.plist"; sourceTree = "<group>"; };
+		A62957C4153114B30005BD93 /* iHOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHOSTests-Info.plist"; sourceTree = "<group>"; };
 		A62957C6153114B30005BD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A62957C8153114B30005BD93 /* iHOSTests.h */ = {isa = PBXFileReference; path = iHOSTests.h; sourceTree = "<group>"; };
+		A62957C8153114B30005BD93 /* iHOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHOSTests.h; sourceTree = "<group>"; };
 		A62957C9153114B30005BD93 /* iHOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSTests.m; sourceTree = "<group>"; };
+		A6E5D9C215311AE20047C8D6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A6E5D9C515311AEA0047C8D6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E5D9C615311AEA0047C8D6 /* CoreLocation.framework in Frameworks */,
+				A6E5D9C315311AE20047C8D6 /* MapKit.framework in Frameworks */,
 				A629579C153114B30005BD93 /* UIKit.framework in Frameworks */,
 				A629579E153114B30005BD93 /* Foundation.framework in Frameworks */,
 				A62957A0153114B30005BD93 /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +89,8 @@
 		A629578C153114B30005BD93 = {
 			isa = PBXGroup;
 			children = (
+				A6E5D9C515311AEA0047C8D6 /* CoreLocation.framework */,
+				A6E5D9C215311AE20047C8D6 /* MapKit.framework */,
 				A62957A1153114B30005BD93 /* iHOS */,
 				A62957C2153114B30005BD93 /* iHOSTests */,
 				A629579A153114B30005BD93 /* Frameworks */,
@@ -443,6 +451,7 @@
 				A62957CF153114B30005BD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A62957D0153114B30005BD93 /* Build configuration list for PBXNativeTarget "iHOSTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +460,7 @@
 				A62957D2153114B30005BD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

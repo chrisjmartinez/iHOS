@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface iHOSViewController : UIViewController
+@interface iHOSViewController : UIViewController <CLLocationManagerDelegate>
+- (IBAction)startTracking:(id)sender;
+- (IBAction)stopTracking:(id)sender;
+- (void) postGPSFix:(double) lat lonParam:(double) lon;
 
+@property (weak, nonatomic) IBOutlet UITextField *lat;
+@property (weak, nonatomic) IBOutlet UITextField *accuracy;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (strong, nonatomic) CLLocationManager * locMan;
+@property (weak, nonatomic) IBOutlet UITextField *lon;
 @end
