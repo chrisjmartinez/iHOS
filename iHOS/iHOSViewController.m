@@ -28,7 +28,7 @@
     self.locMan = [[CLLocationManager alloc] init];
     self.locMan.delegate = self;
     self.locMan.desiredAccuracy = kCLLocationAccuracyBest;// kCLLocationAccuracyBestForNavigation;
-    self.locMan.distanceFilter = 1609;  // 1 mile
+    self.locMan.distanceFilter = 100;  // 1 mile = 1609
     
     [super viewDidLoad];
 
@@ -150,28 +150,34 @@
     //inAltAcc:undefined
     //inUser:Axel
     //inDev:iMac    
-    NSString * queryURL;
-    NSString * queryResults;
-    NSArray * queryData;
-    
-//    queryURL = [[NSString alloc] initWithString: @"http://www.kickserve.net/loco/poc/web/postdata.php"];
-    
-    queryURL = [[NSString alloc] initWithFormat:@"http://www.kickserve.net/loco/poc/web/postdata.php?inTrackID=%@&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
-        @"1333681926",
-        lat,
-        lon,
-        @"5",
-        @"1",
-        @"1",
-        @"1",
-        @"Chris",
-        @"iPhone_emulator"];
 
-    queryResults = [[NSString alloc]
-                    initWithContentsOfURL:[NSURL URLWithString:queryURL]
-                    encoding:NSUTF8StringEncoding
-                    error: nil];
-                    
-    queryData = [queryResults componentsSeparatedByString:@","];
+    NSMutableURLRequest *request = 
+    [[NSMutableURLRequest alloc] initWithURL:
+     [NSURL URLWithString:@"http://www.kickserve.net/loco/poc/web/postdata.php"]];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSString *postString = [[NSString alloc] initWithFormat:@"inTrackID=%@&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
+                            @"1333681926",
+                            lat,
+                            lon,
+                            @"5",
+                            @"1",
+                            @"1",
+                            @"1",
+                            @"Chris",
+                            @"iPhone_emulator"];
+    
+    //@"go=1&name=Bad%20Bad%20Bug&description=This%20bug%20is%20really%20really%20super%20bad.";
+    
+    [request setValue:[NSString 
+                       stringWithFormat:@"%d", [postString length]] 
+   forHTTPHeaderField:@"Content-length"];
+    
+    [request setHTTPBody:[postString 
+                          dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [[NSURLConnection alloc] 
+     initWithRequest:request delegate:self];
 }
 @end
