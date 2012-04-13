@@ -7,8 +7,10 @@
 //
 
 #import "iHOSViewController.h"
+#import "iHOSFix.h"
 
 @implementation iHOSViewController
+@synthesize user;
 @synthesize lat;
 @synthesize accuracy;
 @synthesize map;
@@ -42,6 +44,7 @@
     [self setLat:nil];
     [self setAccuracy:nil];
     [self setLon:nil];
+    [self setUser:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -108,7 +111,12 @@
     self.accuracy.text = [NSString stringWithFormat:@"%d", acc];
     
     // post the fix to the server
-    [self postGPSFix:latitude lonParam:longitude];
+//    [self postGPSFix:latitude lonParam:longitude];
+    iHOSFix * fix = [[iHOSFix alloc] init];
+    
+    fix.inUser = user.text;
+    fix.inLocation = newLocation;
+    [fix uploadToServer];
     
 }
 
@@ -124,7 +132,7 @@
     }
 }
 
-- (void) postGPSFix:(double)lat lonParam:(double)lon {
+- (void) postGPSFix:(double)latitude lonParam:(double)longitude {
     // Hardcode parameters for now
     // eventually, this should read from a plist or user settings
     
@@ -151,22 +159,24 @@
     //inUser:Axel
     //inDev:iMac    
 
+    long unixTimeStamp = [[NSDate date] timeIntervalSince1970];
+    
     NSMutableURLRequest *request = 
     [[NSMutableURLRequest alloc] initWithURL:
      [NSURL URLWithString:@"http://www.kickserve.net/loco/poc/web/postdata.php"]];
     
     [request setHTTPMethod:@"POST"];
     
-    NSString *postString = [[NSString alloc] initWithFormat:@"inTrackID=%@&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
-                            @"1333681926",
-                            lat,
-                            lon,
+    NSString *postString = [[NSString alloc] initWithFormat:@"inTrackID=%d&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
+                            unixTimeStamp,
+                            latitude,
+                            longitude,
                             @"5",
                             @"1",
                             @"1",
                             @"1",
                             @"Chris",
-                            @"iPhone_emulator"];
+                            [UIDevice currentDevice].name];
     
     //@"go=1&name=Bad%20Bad%20Bug&description=This%20bug%20is%20really%20really%20super%20bad.";
     
@@ -179,5 +189,9 @@
     
     [[NSURLConnection alloc] 
      initWithRequest:request delegate:self];
+}
+
+- (IBAction)hideKeyboard:(id)sender {
+    [self.user resignFirstResponder];
 }
 @end

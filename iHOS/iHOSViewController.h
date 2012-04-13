@@ -14,7 +14,9 @@
 - (IBAction)startTracking:(id)sender;
 - (IBAction)stopTracking:(id)sender;
 - (void) postGPSFix:(double) lat lonParam:(double) lon;
+- (IBAction)hideKeyboard:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *user;
 @property (weak, nonatomic) IBOutlet UITextField *lat;
 @property (weak, nonatomic) IBOutlet UITextField *accuracy;
 @property (weak, nonatomic) IBOutlet MKMapView *map;

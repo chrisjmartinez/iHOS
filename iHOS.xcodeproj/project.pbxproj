@@ -22,6 +22,7 @@
 		A62957C7153114B30005BD93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A62957C5153114B30005BD93 /* InfoPlist.strings */; };
 		A62957CA153114B30005BD93 /* iHOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A62957C9153114B30005BD93 /* iHOSTests.m */; };
 		A63C76FA1533BE48008E83E0 /* sniper_soldier_with_weapon_256.png in Resources */ = {isa = PBXBuildFile; fileRef = A63C76F91533BE48008E83E0 /* sniper_soldier_with_weapon_256.png */; };
+		A68D40D915365ED100BE4B11 /* iHOSFix.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D40D815365ED100BE4B11 /* iHOSFix.m */; };
 		A6E5D9C315311AE20047C8D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E5D9C215311AE20047C8D6 /* MapKit.framework */; };
 		A6E5D9C615311AEA0047C8D6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E5D9C515311AEA0047C8D6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		A62957C8153114B30005BD93 /* iHOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHOSTests.h; sourceTree = "<group>"; };
 		A62957C9153114B30005BD93 /* iHOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHOSTests.m; sourceTree = "<group>"; };
 		A63C76F91533BE48008E83E0 /* sniper_soldier_with_weapon_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sniper_soldier_with_weapon_256.png; sourceTree = "<group>"; };
+		A68D40D715365ED100BE4B11 /* iHOSFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHOSFix.h; sourceTree = "<group>"; };
+		A68D40D815365ED100BE4B11 /* iHOSFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHOSFix.m; sourceTree = "<group>"; };
 		A6E5D9C215311AE20047C8D6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A6E5D9C515311AEA0047C8D6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -131,6 +134,8 @@
 				A62957B3153114B30005BD93 /* iHOSViewController.h */,
 				A62957B4153114B30005BD93 /* iHOSViewController.m */,
 				A62957A2153114B30005BD93 /* Supporting Files */,
+				A68D40D715365ED100BE4B11 /* iHOSFix.h */,
+				A68D40D815365ED100BE4B11 /* iHOSFix.m */,
 			);
 			path = iHOS;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				A62957A8153114B30005BD93 /* main.m in Sources */,
 				A62957AC153114B30005BD93 /* iHOSAppDelegate.m in Sources */,
 				A62957B5153114B30005BD93 /* iHOSViewController.m in Sources */,
+				A68D40D915365ED100BE4B11 /* iHOSFix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
