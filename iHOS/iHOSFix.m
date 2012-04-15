@@ -18,8 +18,6 @@
 {
     self = [super init];
     if (self != nil) {
-        inTrackID = [[NSDate date] timeIntervalSince1970];
-//        inUser = [[NSString alloc]initWithString: @"Chris"];
         inDev = [UIDevice currentDevice].name;
         inLocation = [CLLocation alloc];
     }

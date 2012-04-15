@@ -16,6 +16,7 @@
 @synthesize map;
 @synthesize locMan;
 @synthesize lon;
+@synthesize inTrackID;
 
 - (void)didReceiveMemoryWarning
 {
@@ -113,7 +114,8 @@
     // post the fix to the server
 //    [self postGPSFix:latitude lonParam:longitude];
     iHOSFix * fix = [[iHOSFix alloc] init];
-    
+
+    fix.inTrackID = inTrackID;
     fix.inUser = user.text;
     fix.inLocation = newLocation;
     [fix uploadToServer];
@@ -122,6 +124,7 @@
 
 - (IBAction)startTracking:(id)sender {
     if (nil != self.locMan) {
+        inTrackID = [[NSDate date] timeIntervalSince1970];
         [self.locMan startUpdatingLocation];
     }
 }

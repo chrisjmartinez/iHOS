@@ -22,4 +22,6 @@
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) CLLocationManager * locMan;
 @property (weak, nonatomic) IBOutlet UITextField *lon;
+@property (readwrite) long inTrackID;
+
 @end
