@@ -23,5 +23,5 @@
 @property (strong, nonatomic) CLLocationManager * locMan;
 @property (weak, nonatomic) IBOutlet UITextField *lon;
 @property (readwrite) long inTrackID;
-
+@property (nonatomic, strong) NSMutableArray * cacheFix;
 @end

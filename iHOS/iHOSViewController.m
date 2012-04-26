@@ -17,6 +17,7 @@
 @synthesize locMan;
 @synthesize lon;
 @synthesize inTrackID;
+@synthesize cacheFix;
 
 - (void)didReceiveMemoryWarning
 {
@@ -32,7 +33,8 @@
     self.locMan.delegate = self;
     self.locMan.desiredAccuracy = kCLLocationAccuracyBest;// kCLLocationAccuracyBestForNavigation;
     self.locMan.distanceFilter = 100;  // 1 mile = 1609
-    
+    self.cacheFix = [[NSMutableArray alloc] init];
+                     
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -46,6 +48,7 @@
     [self setAccuracy:nil];
     [self setLon:nil];
     [self setUser:nil];
+    [self setCacheFix:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -91,6 +94,8 @@
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 
+    int CACHE_LIMIT = 100;
+
     // update the map with the new location    
     MKCoordinateRegion mapRegion;
     double latitude = newLocation.coordinate.latitude;
@@ -118,8 +123,12 @@
     fix.inTrackID = inTrackID;
     fix.inUser = user.text;
     fix.inLocation = newLocation;
-    [fix uploadToServer];
     
+    [self.cacheFix addObject:fix];
+        
+    if ([self.cacheFix count] > CACHE_LIMIT) {
+        [self flushCache];        
+    }
 }
 
 - (IBAction)startTracking:(id)sender {
@@ -133,65 +142,20 @@
     if (nil != self.locMan) {
         [self.locMan stopUpdatingLocation];
     }
+    
+    [self flushCache];            
 }
 
-- (void) postGPSFix:(double)latitude lonParam:(double)longitude {
-    // Hardcode parameters for now
-    // eventually, this should read from a plist or user settings
+- (void) flushCache {
+    iHOSFix * fix = nil;
     
-    //inTrackID:  Trackid is a Unix time stamp of the first datapoint in the track, all other points use this ID until Motorcade decides a new track starts
-    //inUser:  Id of user; user may have multiple devices 
-    //inDev:  Unique device id
+    for (int nIndex = 0; nIndex < [self.cacheFix count]; nIndex++)
+    {
+        fix = [self.cacheFix objectAtIndex:nIndex];
+        [fix uploadToServer];        
+    }
     
-    //And then all the fields of the geolocation position object:
-    //inLat:  
-    //inLon:  
-    //inAcc:  
-    //inSpd:  
-    //inAlt:  
-    //inAltAcc
-    
-    //Here is a sample of posted data from Chrome on the Mac, where speed and altitude are undefined.
-    //inTrackID:1333681925
-    //inLat:26.959515183990018
-    //inLon:-80.13579593303677
-    //inAcc:100
-    //inSpd:undefined
-    //inAlt:undefined
-    //inAltAcc:undefined
-    //inUser:Axel
-    //inDev:iMac    
-
-    long unixTimeStamp = [[NSDate date] timeIntervalSince1970];
-    
-    NSMutableURLRequest *request = 
-    [[NSMutableURLRequest alloc] initWithURL:
-     [NSURL URLWithString:@"http://www.kickserve.net/loco/poc/web/postdata.php"]];
-    
-    [request setHTTPMethod:@"POST"];
-    
-    NSString *postString = [[NSString alloc] initWithFormat:@"inTrackID=%d&inLat=%f&inLon=%f&inAcc=%@&inSpd=%@&inAlt=%@&inAltAcc=%@&inUser=%@&inDev=%@",
-                            unixTimeStamp,
-                            latitude,
-                            longitude,
-                            @"5",
-                            @"1",
-                            @"1",
-                            @"1",
-                            @"Chris",
-                            [UIDevice currentDevice].name];
-    
-    //@"go=1&name=Bad%20Bad%20Bug&description=This%20bug%20is%20really%20really%20super%20bad.";
-    
-    [request setValue:[NSString 
-                       stringWithFormat:@"%d", [postString length]] 
-   forHTTPHeaderField:@"Content-length"];
-    
-    [request setHTTPBody:[postString 
-                          dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [[NSURLConnection alloc] 
-     initWithRequest:request delegate:self];
+    [self.cacheFix removeAllObjects];
 }
 
 - (IBAction)hideKeyboard:(id)sender {
