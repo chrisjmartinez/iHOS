@@ -116,8 +116,7 @@
     self.lon.text = [NSString stringWithFormat:@"%2.4f",longitude];
     self.accuracy.text = [NSString stringWithFormat:@"%d", acc];
     
-    // post the fix to the server
-//    [self postGPSFix:latitude lonParam:longitude];
+    // add the fix to the cache
     iHOSFix * fix = [[iHOSFix alloc] init];
 
     fix.inTrackID = inTrackID;
@@ -148,10 +147,10 @@
 
 - (void) flushCache {
     iHOSFix * fix = nil;
+    NSEnumerator * enumerator = [self.cacheFix objectEnumerator];
     
-    for (int nIndex = 0; nIndex < [self.cacheFix count]; nIndex++)
+    while(fix = [enumerator nextObject])
     {
-        fix = [self.cacheFix objectAtIndex:nIndex];
         [fix uploadToServer];        
     }
     
